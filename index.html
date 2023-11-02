@@ -17,19 +17,19 @@
 <body>
 
     <div id="app">
-        <div class="container">
+        <div class="container py-3">
             <header class="text-center p-3">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Pirate_Flag.svg/2560px-Pirate_Flag.svg.png
                 " alt="logo">
-                <div class="d-flex justify-content-center py-4">
+                <div class="d-sm-flex justify-content-between py-4 align-items-center">
                     <select name="filter" id="filter" v-model="filterValue" class="bg-dark text-white">
                         <option value="">Tutti</option>
                         <option value="done">Fatti</option>
                         <option value="undone">Da fare</option>
                     </select>
-                    <input type="text" class="form-control w-50 mx-3 bg-dark text-white" v-model="newTask"
-                        @keyup.enter="addTask">
-                    <button class="btn btn-dark" @click="addTask">Add Task</button>
+                    <input type="text" class="form-control w-75 mx-3 bg-dark text-white my-3 mx-auto mx-sm-2"
+                        v-model="newTask" @keyup.enter="addTask">
+                    <button class="btn btn-dark text-nowrap" @click="addTask">Add Task</button>
                 </div>
                 <p class="text-white fs-3">Bene capitano, queste sono tutte le cose che sono rimaste da fare prima di
                     salpare
